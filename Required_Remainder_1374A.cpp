@@ -10,7 +10,7 @@ ll largest_rem(ll x , ll y , ll n){
         return n;
     }
 
-    while(quo*x + y>n){
+    while(quo*x + y>n && quo>=0){
         quo = quo-1;
         if(quo*x + y <n){
             return (quo *x + y);
@@ -24,7 +24,7 @@ int main(){
     cin>>t;
 
     ll x , y , n;
-    vector <int>ans;
+    vector <ll>ans;
     for(int i = 0; i<t; i++){
         cin>>x>>y>>n;
         ans.push_back(largest_rem(x , y , n));
